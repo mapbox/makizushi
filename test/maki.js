@@ -14,7 +14,8 @@ test('makizushi', function(t) {
 test('makizushi-symbol', function(t) {
     makizushi({
         name: 'pin-l',
-        label: 'bus'
+        label: 'bus',
+        tint: 'f0f'
     }, function(err, res) {
         t.equal(err, null, 'no error returned');
         t.end();

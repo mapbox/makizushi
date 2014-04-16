@@ -22,7 +22,7 @@ module.exports = getMarker;
 /**
  * Given a marker object like
  *
- * { tint, label, name }
+ * { base, tint, symbol, name }
  *
  * Call callback with buffer.
  *
@@ -35,14 +35,16 @@ function getMarker(options, callback) {
         // This is not done upstream in `node-tint` as some such
         // shorthand cannot be disambiguated from other tintspec strings,
         // e.g. 123 (rgb shorthand) vs. 123 (hue).
-        if (options.tint.length === 3) options.tint =
-            options.tint[0] + options.tint[0] +
-            options.tint[1] + options.tint[1] +
-            options.tint[2] + options.tint[2];
+        if (options.tint.length === 3) {
+            options.tint =
+                options.tint[0] + options.tint[0] +
+                options.tint[1] + options.tint[1] +
+                options.tint[2] + options.tint[2];
+        }
         options.parsedTint = blend.parseTintString(options.tint);
     }
 
-    if (!options.label || (options.label && options.label.length === 1)) {
+    if (!options.symbol || (options.symbol && options.symbol.length === 1)) {
         loadCached(options, callback);
     } else {
         loadMaki(options, callback);
@@ -56,18 +58,16 @@ function getMarker(options, callback) {
  * @param {function} callback
  */
 function loadMaki(options, callback) {
-    var base = getBase(options),
-        size = options.name.split('-').pop(),
-        symbol = (options.label || '') +
-            ((options.label && size) ? '-' + sizes[size] : '') +
-            ((options.label && options.retina) ? '@2x' : '');
+    var base = options.base + '-' + options.size,
+        size = options.size,
+        symbol = options.symbol + '-' + sizes[size] + (options.retina ? '@2x' : '');
 
     if (!base || !size) {
-        return callback('Marker "' + JSON.stringify(options) + '" is invalid.');
+        return callback('Marker "' + JSON.stringify(options) + '" is invalid because it lacks base or size.');
     }
 
     fs.readFile(makiRenders + symbol + '.png', function(err, data) {
-        if (err) return callback('Marker "' + JSON.stringify(options) + '" is invalid.');
+        if (err) return callback('Marker "' + JSON.stringify(options) + '" is invalid because the symbol is not found.');
 
         // Base marker gets tint applied.
         var parts = [{
@@ -101,16 +101,10 @@ function loadMaki(options, callback) {
             height: height
         }, function(err, data) {
             if (err) return callback(err);
-            return callback(null, {
-                width: width,
-                height: height,
-                image: data,
-                size: data.length
-            });
+            return callback(null, data);
         });
     });
 }
-
 
 /**
  * Load & generate a cached [a-z0-9] marker.
@@ -119,13 +113,12 @@ function loadMaki(options, callback) {
  * @param {function} callback
  */
 function loadCached(options, callback) {
-    var base = getBase(options);
-    var size = options.name.split('-').pop();
-    var symbol = (options.label || '') +
-        ((options.label && size) ? '-' + size : '') +
-        ((options.label && options.retina) ? '@2x' : '');
+    var base = options.base + '-' + options.size,
+        size = options.size,
+        symbol = options.symbol + (options.retina ? '@2x' : '');
 
-    if (!base || !size || !markerCache.base[base] || (symbol && !markerCache.symbol[symbol])) {
+    if (!base || !size || !markerCache.base[base] ||
+        (symbol && !markerCache.symbol[symbol])) {
         return callback('Marker "' + JSON.stringify(options) + '" is invalid.');
     }
 
@@ -159,20 +152,6 @@ function loadCached(options, callback) {
         height: height
     }, function(err, data) {
         if (err) return callback(err);
-        return callback(null, {
-            width: width,
-            height: height,
-            image: data,
-            size: data.length
-        });
+        return callback(null,  data);
     });
-}
-
-/**
- * Given an options object, return the base, like 'pin'
- * @param {object} options
- * @returns {string}
- */
-function getBase(options) {
-    return options.name + ((options.name && options.retina) ? '@2x' : '');
 }
