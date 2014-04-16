@@ -1,0 +1,36 @@
+{
+  "name": "makizushi",
+  "version": "0.0.0",
+  "description": "professional maki chef",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "blend": "~0.10.1",
+    "maki": "~0.3.0",
+    "xtend": "~3.0.0",
+    "tap": "~0.4.8"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mapbox/makizushi.git"
+  },
+  "keywords": [
+    "maki",
+    "icon",
+    "custom"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/makizushi/issues"
+  },
+  "homepage": "https://github.com/mapbox/makizushi"
+}
