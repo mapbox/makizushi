@@ -58,7 +58,7 @@ function getMarker(options, callback) {
  * @param {function} callback
  */
 function loadMaki(options, callback) {
-    var base = options.base + '-' + options.size,
+    var base = options.base + '-' + options.size + (options.retina ? '@2x' : ''),
         size = options.size,
         symbol = options.symbol + '-' + sizes[size] + (options.retina ? '@2x' : '');
 
@@ -113,7 +113,7 @@ function loadMaki(options, callback) {
  * @param {function} callback
  */
 function loadCached(options, callback) {
-    var base = options.base + '-' + options.size,
+    var base = options.base + '-' + options.size + (options.retina ? '@2x' : ''),
         size = options.size,
         symbol;
 
