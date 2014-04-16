@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mapbox/makizushi.svg)](https://travis-ci.org/mapbox/makizushi)
+
 # makizushi
 
 Professional [Maki](https://www.mapbox.com/maki/) chef.
