@@ -115,7 +115,7 @@ function loadMaki(options, callback) {
 function loadCached(options, callback) {
     var base = options.base + '-' + options.size,
         size = options.size,
-        symbol = options.symbol + (options.retina ? '@2x' : '');
+        symbol = options.symbol + '-' + options.size + (options.retina ? '@2x' : '');
 
     if (!base || !size || !markerCache.base[base] ||
         (symbol && !markerCache.symbol[symbol])) {

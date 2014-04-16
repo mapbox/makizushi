@@ -3,8 +3,9 @@ var test = require('tap').test,
 
 test('makizushi', function(t) {
     makizushi({
-        name: 'pin-l',
-        label: 'a'
+        size: 'l',
+        base: 'pin',
+        symbol: 'a'
     }, function(err, res) {
         t.equal(err, null, 'no error returned');
         t.end();
@@ -13,8 +14,9 @@ test('makizushi', function(t) {
 
 test('makizushi-symbol', function(t) {
     makizushi({
-        name: 'pin-l',
-        label: 'bus',
+        base: 'pin',
+        size: 'l',
+        symbol: 'bus',
         tint: 'f0f'
     }, function(err, res) {
         t.equal(err, null, 'no error returned');
@@ -24,8 +26,9 @@ test('makizushi-symbol', function(t) {
 
 test('makizushi-tint', function(t) {
     makizushi({
-        name: 'pin-l',
-        label: 'bus',
+        base: 'pin',
+        size: 'l',
+        symbol: 'bus',
         tint: 'ace'
     }, function(err, res) {
         t.equal(err, null, 'no error returned');
