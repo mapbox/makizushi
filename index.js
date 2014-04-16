@@ -7,23 +7,29 @@ var fs = require('fs'),
 var markerCache = require('./cache');
 
 var offsets = {
-    's': {x:4,y:4},
-    'm': {x:6,y:5},
-    'l': {x:5,y:7},
-    's@2x': {x:8,y:8},
-    'm@2x': {x:12,y:10},
-    'l@2x': {x:10,y:14}
-};
-
-var sizes = { s: 12, m: 18, l: 24 };
-
-var makiRenders = maki.dirname + '/renders/';
+        's': {x:4,y:4},
+        'm': {x:6,y:5},
+        'l': {x:5,y:7},
+        's@2x': {x:8,y:8},
+        'm@2x': {x:12,y:10},
+        'l@2x': {x:10,y:14}
+    },
+    sizes = { s: 12, m: 18, l: 24 },
+    makiRenders = maki.dirname + '/renders/';
 
 module.exports = getMarker;
 
+/**
+ * Given a marker object like
+ *
+ * { tint, label, name }
+ *
+ * Call callback with buffer.
+ *
+ * @param {object} options
+ * @param {function} callback
+ */
 function getMarker(options, callback) {
-    var tint;
-
     if (options.tint) {
         // Expand hex shorthand (3 chars) to 6, e.g. 333 => 333333.
         // This is not done upstream in `node-tint` as some such
@@ -37,18 +43,20 @@ function getMarker(options, callback) {
     }
 
     if (!options.label || (options.label && options.label.length === 1)) {
-        loadFile(options, callback);
+        loadCached(options, callback);
     } else {
         loadMaki(options, callback);
     }
 }
 
 /**
+ * Load & composite a marker from the maki icon set.
+ *
  * @param {object} options
  * @param {function} callback
  */
 function loadMaki(options, callback) {
-    var base = options.name + ((options.name && options.retina) ? '@2x' : ''),
+    var base = getBase(options),
         size = options.name.split('-').pop(),
         symbol = (options.label || '') +
             ((options.label && size) ? '-' + sizes[size] : '') +
@@ -103,12 +111,15 @@ function loadMaki(options, callback) {
     });
 }
 
+
 /**
+ * Load & generate a cached [a-z0-9] marker.
+ *
  * @param {object} options
  * @param {function} callback
  */
-function loadFile(options, callback) {
-    var base = options.name + ((options.name && options.retina) ? '@2x' : '');
+function loadCached(options, callback) {
+    var base = getBase(options);
     var size = options.name.split('-').pop();
     var symbol = (options.label || '') +
         ((options.label && size) ? '-' + size : '') +
@@ -155,4 +166,13 @@ function loadFile(options, callback) {
             size: data.length
         });
     });
+}
+
+/**
+ * Given an options object, return the base, like 'pin'
+ * @param {object} options
+ * @returns {string}
+ */
+function getBase(options) {
+    return options.name + ((options.name && options.retina) ? '@2x' : '');
 }
