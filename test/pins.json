@@ -1,0 +1,49 @@
+[
+    {
+        "size": "l",
+        "base": "pin",
+        "symbol": "a"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "bus",
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "bus",
+        "tint": "ace"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "tint": "ace"
+    },
+    {
+        "base": "pin",
+        "size": "m",
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
+        "size": "m",
+        "retina": true,
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "b",
+        "retina": true,
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
+        "size": "s",
+        "symbol": "c",
+        "retina": true,
+        "tint": "0f0"
+    }
+]

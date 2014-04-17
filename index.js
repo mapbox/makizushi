@@ -30,6 +30,8 @@ module.exports = getMarker;
  * @param {function} callback
  */
 function getMarker(options, callback) {
+    // prevent .parsedTint from being attached to options
+    options = xtend({}, options);
     if (options.tint) {
         // Expand hex shorthand (3 chars) to 6, e.g. 333 => 333333.
         // This is not done upstream in `node-tint` as some such
