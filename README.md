@@ -30,6 +30,8 @@ buffer of image data.
 var makizushi = require('makizushi');
 
 makizushi({
+    base: 'pin',
+    size: 'l',
     tint: '333',
     label: 'a'
 }, function(err, buf) {
