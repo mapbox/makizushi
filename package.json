@@ -1,6 +1,6 @@
 {
   "name": "makizushi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
