@@ -37,6 +37,16 @@ test('invalid-marker', function(t) {
     });
 });
 
+test('invalid-symbol', function(t) {
+    makizushi({
+        base: 'pin-m',
+        symbol: 'foo'
+    }, function(err, res) {
+        t.equal(err.message, 'Marker "{"base":"pin-m","symbol":"foo"}" is invalid because it lacks base or size.');
+        t.end();
+    });
+});
+
 function slug(o) {
     return Object.keys(o).map(function(k) {
         return o[k];
