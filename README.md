@@ -2,7 +2,9 @@
 
 # makizushi
 
-Professional [Maki](https://www.mapbox.com/maki/) chef.
+Professional [Maki](https://www.mapbox.com/maki/) chef. This module produces custom markers based
+on the Maki icon set, in custom sizes and colors. To do this, it chooses, tints, and flattens parts
+of the image, using [node-blend](https://github.com/mapbox/node-blend).
 
 ## install
 
@@ -28,6 +30,8 @@ buffer of image data.
 var makizushi = require('makizushi');
 
 makizushi({
+    base: 'pin',
+    size: 'l',
     tint: '333',
     label: 'a'
 }, function(err, buf) {
