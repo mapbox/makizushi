@@ -21,6 +21,22 @@ pins.forEach(function(pin) {
     });
 });
 
+test('invalid-marker', function(t) {
+    makizushi({}, function(err, res) {
+        t.equal(err.message, 'Marker "{}" is invalid.');
+        t.end();
+    });
+});
+
+test('invalid-marker', function(t) {
+    makizushi({
+        base: 'pin-l'
+    }, function(err, res) {
+        t.equal(err.message, 'Marker "{"base":"pin-l"}" is invalid.');
+        t.end();
+    });
+});
+
 function slug(o) {
     return Object.keys(o).map(function(k) {
         return o[k];

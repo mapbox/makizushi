@@ -65,11 +65,11 @@ function loadMaki(options, callback) {
         symbol = options.symbol + '-' + sizes[size] + (options.retina ? '@2x' : '');
 
     if (!base || !size) {
-        return callback('Marker "' + JSON.stringify(options) + '" is invalid because it lacks base or size.');
+        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because it lacks base or size.'));
     }
 
     fs.readFile(makiRenders + symbol + '.png', function(err, data) {
-        if (err) return callback('Marker "' + JSON.stringify(options) + '" is invalid because the symbol is not found.');
+        if (err) return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because the symbol is not found.'));
 
         // Base marker gets tint applied.
         var parts = [{
@@ -125,7 +125,7 @@ function loadCached(options, callback) {
 
     if (!base || !size || !markerCache.base[base] ||
         (symbol && !markerCache.symbol[symbol])) {
-        return callback('Marker "' + JSON.stringify(options) + '" is invalid.');
+        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid.'));
     }
 
     // Base marker gets tint applied.
