@@ -17,6 +17,12 @@ var offsets = {
     sizes = { s: 12, m: 18, l: 24 },
     makiRenders = maki.dirname + '/renders/';
 
+var makiAvailable = fs.readdirSync(makiRenders)
+    .reduce(function(mem, file) {
+        mem[file.replace('.png', '')] = true;
+        return mem;
+    }, {});
+
 module.exports = getMarker;
 
 /**
@@ -46,7 +52,9 @@ function getMarker(options, callback) {
         options.parsedTint = blend.parseTintString(options.tint);
     }
 
-    if (!options.symbol || (options.symbol && options.symbol.length === 1)) {
+    if (!options.symbol ||
+        (options.symbol && options.symbol.length === 1) ||
+        (options.symbol.length === 2 && !isNaN(parseInt(options.symbol)))) {
         loadCached(options, callback);
     } else {
         loadMaki(options, callback);
@@ -66,6 +74,10 @@ function loadMaki(options, callback) {
 
     if (!base || !size) {
         return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because it lacks base or size.'));
+    }
+
+    if (!makiAvailable[symbol]) {
+        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because the symbol is not found.'));
     }
 
     fs.readFile(makiRenders + symbol + '.png', function(err, data) {

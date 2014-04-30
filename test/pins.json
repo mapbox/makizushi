@@ -41,6 +41,34 @@
     },
     {
         "base": "pin",
+        "size": "l",
+        "symbol": "1",
+        "retina": true,
+        "tint": "f00"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "88",
+        "retina": false,
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "99",
+        "retina": true,
+        "tint": "000"
+    },
+    {
+        "base": "pin",
+        "size": "m",
+        "symbol": "55",
+        "retina": false,
+        "tint": "f0f"
+    },
+    {
+        "base": "pin",
         "size": "s",
         "symbol": "c",
         "retina": true,
