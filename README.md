@@ -17,7 +17,7 @@ of the image, using [node-blend](https://github.com/mapbox/node-blend).
 Options:
 
 * `tint`: a color in rgb or rrggbb
-* `symbol`: a maki symbol name, or a single char of `[a-z0-9]`
+* `symbol`: a Maki symbol name, or a number from 0 to 99
 * `size`: one of `s`, `m`, or `l`
 * `base`: `"pin"`
 
