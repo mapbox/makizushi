@@ -20,6 +20,7 @@ Options:
 * `symbol`: a Maki symbol name, or a number from 0 to 99
 * `size`: one of `s`, `m`, or `l`
 * `base`: `"pin"`
+* `retina`: `true` or `false`, `true` will return a 2x resolution image
 
 Callback: `(err, data)` in which err is an error if any, and data is a
 buffer of image data.
@@ -33,7 +34,8 @@ makizushi({
     base: 'pin',
     size: 'l',
     tint: '333',
-    label: 'a'
+    symbol: 'car',
+    retina: true
 }, function(err, buf) {
     if (err) throw err;
     fs.writeFileSync('marker.png', buf);
