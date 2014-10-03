@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "blend": "~0.11.0",
+    "blend": "1.0.x",
     "maki": "0.3.1",
     "xtend": "~3.0.0"
   },
