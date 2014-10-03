@@ -1,3 +1,7 @@
+# 1.0.0
+
+* Update to node-blend@1.0.0. Requires C++11 support.
+
 # 0.2.0
 
 * Update to node-blend@0.11.0.
