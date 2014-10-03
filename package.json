@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "blend": "https://github.com/mapbox/node-blend/archive/mapnik3.tar.gz",
+    "blend": "1.0.x",
     "maki": "0.3.1",
     "xtend": "~3.0.0"
   },
