@@ -1,3 +1,7 @@
+# 0.2.1
+
+* Update to maki@0.4.4.
+
 # 0.2.0
 
 * Update to node-blend@0.11.0.
