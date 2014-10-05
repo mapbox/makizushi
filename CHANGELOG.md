@@ -1,3 +1,7 @@
+# 1.1.0
+
+* Update to maki@0.4.4.
+
 # 1.0.0
 
 * Update to node-blend@1.0.0. Requires C++11 support.
