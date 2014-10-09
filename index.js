@@ -73,11 +73,11 @@ function loadMaki(options, callback) {
         symbol = options.symbol + '-' + sizes[size] + (options.retina ? '@2x' : '');
 
     if (!base || !size) {
-        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because it lacks base or size.'));
+        return callback(ErrorCode('Marker is invalid because it lacks base or size.', 'EINVALID'));
     }
 
     if (!makiAvailable[symbol]) {
-        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid because the symbol is not found.'));
+        return callback(ErrorCode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
     }
 
     fs.readFile(makiRenders + symbol + '.png', function(err, data) {
@@ -135,9 +135,16 @@ function loadCached(options, callback) {
         symbol = options.symbol + '-' + options.size + (options.retina ? '@2x' : '');
     }
 
-    if (!base || !size || !markerCache.base[base] ||
-        (symbol && !markerCache.symbol[symbol])) {
-        return callback(new Error('Marker "' + JSON.stringify(options) + '" is invalid.'));
+    if (!base || !size) {
+        return callback(ErrorCode('Marker is invalid because it lacks base or size.', 'EINVALID'));
+    }
+
+    if (!markerCache.base[base]) {
+        return callback(ErrorCode('Marker base "' + options.base + '" is invalid.', 'EINVALID'));
+    }
+
+    if (symbol && !markerCache.symbol[symbol]) {
+        return callback(ErrorCode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
     }
 
     // Base marker gets tint applied.
@@ -173,3 +180,16 @@ function loadCached(options, callback) {
         return callback(null,  data);
     });
 }
+
+/**
+ * Create an error with a code.
+ *
+ * @param {string} message
+ * @param {string} code
+ */
+function ErrorCode(message, code) {
+    var err = new Error(message);
+    err.code = code;
+    return err;
+}
+
