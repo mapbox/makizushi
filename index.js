@@ -2,6 +2,7 @@ var fs = require('fs'),
     path = require('path'),
     blend = require('blend'),
     xtend = require('xtend'),
+    errcode = require('err-code');
     maki = require('maki');
 
 var markerCache = require('./cache');
@@ -73,11 +74,11 @@ function loadMaki(options, callback) {
         symbol = options.symbol + '-' + sizes[size] + (options.retina ? '@2x' : '');
 
     if (!base || !size) {
-        return callback(ErrorCode('Marker is invalid because it lacks base or size.', 'EINVALID'));
+        return callback(errcode('Marker is invalid because it lacks base or size.', 'EINVALID'));
     }
 
     if (!makiAvailable[symbol]) {
-        return callback(ErrorCode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
+        return callback(errcode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
     }
 
     fs.readFile(makiRenders + symbol + '.png', function(err, data) {
@@ -136,15 +137,15 @@ function loadCached(options, callback) {
     }
 
     if (!base || !size) {
-        return callback(ErrorCode('Marker is invalid because it lacks base or size.', 'EINVALID'));
+        return callback(errcode('Marker is invalid because it lacks base or size.', 'EINVALID'));
     }
 
     if (!markerCache.base[base]) {
-        return callback(ErrorCode('Marker base "' + options.base + '" is invalid.', 'EINVALID'));
+        return callback(errcode('Marker base "' + options.base + '" is invalid.', 'EINVALID'));
     }
 
     if (symbol && !markerCache.symbol[symbol]) {
-        return callback(ErrorCode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
+        return callback(errcode('Marker symbol "' + options.symbol + '" is invalid.', 'EINVALID'));
     }
 
     // Base marker gets tint applied.
@@ -179,17 +180,5 @@ function loadCached(options, callback) {
         if (err) return callback(err);
         return callback(null,  data);
     });
-}
-
-/**
- * Create an error with a code.
- *
- * @param {string} message
- * @param {string} code
- */
-function ErrorCode(message, code) {
-    var err = new Error(message);
-    err.code = code;
-    return err;
 }
 
