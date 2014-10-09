@@ -21,28 +21,54 @@ pins.forEach(function(pin) {
     });
 });
 
-test('invalid-marker', function(t) {
+test('invalid-maki', function(t) {
     makizushi({}, function(err, res) {
-        t.equal(err.message, 'Marker "{}" is invalid.');
+        t.equal(err.message, 'Marker is invalid because it lacks base or size.');
+        t.equal(err.code, 'EINVALID');
         t.end();
     });
 });
 
-test('invalid-marker', function(t) {
+test('invalid-maki', function(t) {
     makizushi({
         base: 'pin-l'
     }, function(err, res) {
-        t.equal(err.message, 'Marker "{"base":"pin-l"}" is invalid.');
+        t.equal(err.message, 'Marker is invalid because it lacks base or size.');
+        t.equal(err.code, 'EINVALID');
         t.end();
     });
 });
 
-test('invalid-symbol', function(t) {
+test('invalid-maki', function(t) {
     makizushi({
-        base: 'pin-m',
+        base: 'pin',
+        size: 'm',
         symbol: 'foo'
     }, function(err, res) {
-        t.equal(err.message, 'Marker "{"base":"pin-m","symbol":"foo"}" is invalid because it lacks base or size.');
+        t.equal(err.message, 'Marker symbol \"foo\" is invalid.');
+        t.equal(err.code, 'EINVALID');
+        t.end();
+    });
+});
+
+test('invalid-char', function(t) {
+    makizushi({
+        symbol: '1'
+    }, function(err, res) {
+        t.equal(err.message, 'Marker is invalid because it lacks base or size.');
+        t.equal(err.code, 'EINVALID');
+        t.end();
+    });
+});
+
+test('invalid-char', function(t) {
+    makizushi({
+        base: 'pin',
+        size: 'm',
+        symbol: '/'
+    }, function(err, res) {
+        t.equal(err.message, 'Marker symbol \"/\" is invalid.');
+        t.equal(err.code, 'EINVALID');
         t.end();
     });
 });
