@@ -1,3 +1,11 @@
+# 1.2.1
+
+* Fix some images with invalid sizes.
+
+# 1.2.0
+
+* Add EINVALID code to validation errors.
+
 # 1.1.0
 
 * Update to maki@0.4.4.
