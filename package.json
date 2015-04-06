@@ -13,6 +13,7 @@
     "xtend": "~3.0.0"
   },
   "devDependencies": {
+    "assert-http": "~1.0.1",
     "tap": "~0.4.8"
   },
   "scripts": {
