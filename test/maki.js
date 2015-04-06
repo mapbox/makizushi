@@ -1,6 +1,7 @@
 var test = require('tap').test,
     fs = require('fs'),
     pins = require('./pins.json'),
+    imageEquals = require('assert-http').imageEquals,
     makizushi = require('../');
 
 var REGEN = false;
@@ -11,12 +12,11 @@ pins.forEach(function(pin) {
             t.equal(err, null, 'no error returned');
             if (REGEN) {
                 fs.writeFileSync(__dirname +'/data/' + slug(pin), res);
-            } else {
-                t.deepEqual(
-                    fs.readFileSync(__dirname +'/data/' + slug(pin)),
-                    res, 'image is correct');
             }
-            t.end();
+            imageEquals(res, fs.readFileSync(__dirname +'/data/' + slug(pin)), { diffsize: 0.5 }, function(err) {
+                t.ifError(err, 'image is correct');
+                t.end();
+            });
         });
     });
 });
