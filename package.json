@@ -17,7 +17,7 @@
     "tap": "~0.4.8"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "./test/sizes.sh && tap test/*.js"
   },
   "repository": {
     "type": "git",

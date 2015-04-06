@@ -13,7 +13,7 @@
    height="108.00002"
    id="svg6073"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="alphanum.svg">
   <defs
      id="defs6075">
@@ -43,9 +43,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="324.33473"
-     inkscape:cy="-204.38172"
+     inkscape:zoom="22.737368"
+     inkscape:cx="268.37252"
+     inkscape:cy="19.561116"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -2001,21 +2001,18 @@
     </g>
     <g
        id="q-12"
-       inkscape:label="#g4037"
+       inkscape:label="#g6510"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
-      <text
-         sodipodi:linespacing="125%"
+      <g
          id="text4853"
-         y="1038.3622"
-         x="198.5"
-         style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;opacity:0.3;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
-         xml:space="preserve"><tspan
-           style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
-           y="1038.3622"
-           x="198.5"
-           id="tspan4855"
-           sodipodi:role="line">Q</tspan></text>
+         style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;opacity:0.3;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dashoffset:0;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">
+        <path
+           id="path6503"
+           transform="translate(0,944.36218)"
+           d="M 198.5 85 C 197.10242 85 195.85995 85.458 195 86.375 C 194.13923 87.2932 193.75 88.55995 193.75 90.03125 C 193.75 91.50255 194.14452 92.79195 195 93.71875 C 195.76698 94.54965 196.86936 94.94925 198.09375 95.03125 L 198.875 96 L 202.5625 96 L 202.9375 95.1875 L 201.65625 93.78125 C 201.9891 93.46985 202.4099 93.25495 202.625 92.84375 C 203.04857 92.03785 203.21874 91.1052 203.21875 90.0625 C 203.21874 88.5952 202.85234 87.2987 202 86.375 C 201.15008 85.4486 199.89856 85 198.5 85 z M 198.5 88.40625 C 198.93752 88.40625 199.04847 88.47025 199.1875 88.65625 C 199.32653 88.84245 199.5 89.3025 199.5 90.0625 C 199.5 90.8197 199.32701 91.2521 199.1875 91.4375 C 199.04799 91.6229 198.94275 91.6875 198.5 91.6875 C 198.06099 91.6875 197.95453 91.6265 197.8125 91.4375 C 197.66916 91.2464 197.5 90.8133 197.5 90.0625 C 197.5 89.3131 197.66744 88.8788 197.8125 88.6875 L 197.8125 88.65625 C 197.95968 88.46055 198.0628 88.40625 198.5 88.40625 z "
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold" />
+      </g>
       <rect
          style="color:#000000;fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect3545"
@@ -2223,21 +2220,18 @@
     </g>
     <g
        id="w-12"
-       inkscape:label="#g4085"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <text
-         sodipodi:linespacing="125%"
+       inkscape:label="#g6533"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180">
+      <g
          id="text4877"
-         y="1038.3622"
-         x="270.5"
-         style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;opacity:0.3;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
-         xml:space="preserve"><tspan
-           style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold"
-           y="1038.3622"
-           x="270.5"
-           id="tspan4879"
-           sodipodi:role="line">W</tspan></text>
+         style="font-size:10.99990463px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;opacity:0.3;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dashoffset:0;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold">
+        <path
+           id="path6523"
+           transform="translate(0,944.36218)"
+           d="M 264 85.125 L 264 85.5 L 264.21875 86.375 L 266.21875 94.25 L 266.40625 95 L 267.1875 95 L 269.0625 95 L 269.84375 95 L 270.03125 94.25 L 270.5 92.4375 L 270.96875 94.25 L 271.15625 95 L 271.9375 95 L 273.8125 95 L 273.8125 94 L 274.78125 94.21875 L 276 89.4375 L 276 85.125 L 275.8125 85.125 L 274.1875 85.125 L 273.375 85.125 L 273.21875 85.90625 L 272.78125 87.84375 L 272.25 85.875 L 272.0625 85.125 L 271.28125 85.125 L 269.71875 85.125 L 268.9375 85.125 L 268.75 85.875 L 268.25 87.8125 L 267.78125 85.90625 L 267.625 85.125 L 266.8125 85.125 L 265.1875 85.125 L 264 85.125 z M 270.5 87.125 L 270.71875 87.9375 L 270.28125 87.90625 L 270.5 87.125 z M 268.375 92.59375 L 268.28125 93 L 267.96875 93 L 267.875 92.625 L 268.375 92.59375 z M 273.125 92.59375 L 273.03125 93 L 272.71875 93 L 272.625 92.625 L 273.125 92.59375 z "
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans Bold" />
+      </g>
       <rect
          style="color:#000000;fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect3593"
