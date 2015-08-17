@@ -9,7 +9,7 @@
   "dependencies": {
     "err-code": "0.1.2",
     "blend": "1.0.x",
-    "maki": "0.4.4",
+    "maki": "0.5.0",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
