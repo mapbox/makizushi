@@ -1,3 +1,7 @@
+# 1.4.0
+
+* Updated version of blend and mapnik
+
 # 1.2.1
 
 * Fix some images with invalid sizes.
