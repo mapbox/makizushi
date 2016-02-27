@@ -10,7 +10,8 @@
     "err-code": "0.1.2",
     "blend": "~1.2.0",
     "maki": "0.5.0",
-    "xtend": "~3.0.0"
+    "xtend": "~3.0.0",
+    "mapnik": "~3.5.0"
   },
   "devDependencies": {
     "assert-http": "~1.0.1",
