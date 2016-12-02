@@ -1,5 +1,5 @@
 {
-  "name": "makizushi",
+  "name": "@mapbox/makizushi",
   "version": "1.4.0",
   "description": "professional maki chef",
   "main": "index.js",
