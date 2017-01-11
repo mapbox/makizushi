@@ -7,14 +7,15 @@
     "test": "test"
   },
   "dependencies": {
-    "err-code": "0.1.2",
-    "blend": "~1.2.0",
-    "maki": "0.5.0",
-    "xtend": "~3.0.0",
-    "mapnik": "~3.5.0"
+    "blend": "^1.2.0",
+    "err-code": "^1.1.1",
+    "maki": "^2.1.0",
+    "mapnik": "^3.5.14",
+    "xtend": "^4.0.1"
   },
   "devDependencies": {
     "assert-http": "~1.0.1",
+    "eslint": "^3.13.1",
     "tap": "~0.4.8"
   },
   "scripts": {

@@ -1,5 +1,5 @@
-var fs = require('fs'),
-    path = require('path');
+var fs = require('fs');
+var path = require('path');
 
 // Loads up all default markers at require time.
 module.exports = [
@@ -7,9 +7,9 @@ module.exports = [
     ['mask', 'mask'],
     ['alphanum', 'symbol']
 ].reduce(function(memo, destsrc) {
-    var dest = destsrc[1],
-        src = destsrc[0],
-        basepath = path.resolve(__dirname + '/markers-src/' + src);
+    var dest = destsrc[1];
+    var src = destsrc[0];
+    var basepath = path.resolve(__dirname + '/markers-src/' + src);
 
     memo[dest] = fs.readdirSync(basepath)
         .sort()

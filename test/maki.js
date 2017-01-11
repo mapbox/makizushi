@@ -1,8 +1,8 @@
-var test = require('tap').test,
-    fs = require('fs'),
-    pins = require('./pins.json'),
-    imageEquals = require('assert-http').imageEquals,
-    makizushi = require('../');
+var test = require('tap').test;
+var fs = require('fs');
+var pins = require('./pins.json');
+var imageEquals = require('assert-http').imageEquals;
+var makizushi = require('../');
 
 var REGEN = false;
 
@@ -22,7 +22,7 @@ pins.forEach(function(pin) {
 });
 
 test('invalid-maki', function(t) {
-    makizushi({}, function(err, res) {
+    makizushi({}, function(err) {
         t.equal(err.message, 'Marker is invalid because it lacks base or size.');
         t.equal(err.code, 'EINVALID');
         t.end();
@@ -32,7 +32,7 @@ test('invalid-maki', function(t) {
 test('invalid-maki', function(t) {
     makizushi({
         base: 'pin-l'
-    }, function(err, res) {
+    }, function(err) {
         t.equal(err.message, 'Marker is invalid because it lacks base or size.');
         t.equal(err.code, 'EINVALID');
         t.end();
@@ -44,7 +44,7 @@ test('invalid-maki', function(t) {
         base: 'pin',
         size: 'm',
         symbol: 'foo'
-    }, function(err, res) {
+    }, function(err) {
         t.equal(err.message, 'Marker symbol \"foo\" is invalid.');
         t.equal(err.code, 'EINVALID');
         t.end();
@@ -54,7 +54,7 @@ test('invalid-maki', function(t) {
 test('invalid-char', function(t) {
     makizushi({
         symbol: '1'
-    }, function(err, res) {
+    }, function(err) {
         t.equal(err.message, 'Marker is invalid because it lacks base or size.');
         t.equal(err.code, 'EINVALID');
         t.end();
@@ -66,7 +66,7 @@ test('invalid-char', function(t) {
         base: 'pin',
         size: 'm',
         symbol: '/'
-    }, function(err, res) {
+    }, function(err) {
         t.equal(err.message, 'Marker symbol \"/\" is invalid.');
         t.equal(err.code, 'EINVALID');
         t.end();

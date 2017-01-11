@@ -18,6 +18,39 @@
     },
     {
         "base": "pin",
+        "size": "m",
+        "symbol": "bus",
+        "tint": "ace"
+    },
+    {
+        "base": "pin",
+        "size": "s",
+        "symbol": "bank",
+        "tint": "ace"
+    },
+    {
+        "base": "pin",
+        "size": "l",
+        "symbol": "bus",
+        "tint": "ace",
+        "retina": true
+    },
+    {
+        "base": "pin",
+        "size": "m",
+        "symbol": "bus",
+        "tint": "ace",
+        "retina": true
+    },
+    {
+        "base": "pin",
+        "size": "s",
+        "symbol": "bank",
+        "tint": "ace",
+        "retina": true
+    },
+    {
+        "base": "pin",
         "size": "l",
         "tint": "ace"
     },
