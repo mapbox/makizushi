@@ -8,7 +8,7 @@ of the image, using [node-blend](https://github.com/mapbox/node-blend).
 
 ## install
 
-    npm install --save makizushi
+    npm install --save @mapbox/makizushi
 
 ## api
 
