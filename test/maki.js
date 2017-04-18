@@ -1,7 +1,7 @@
 var test = require('tap').test,
     fs = require('fs'),
     pins = require('./pins.json'),
-    imageEquals = require('assert-http').imageEquals,
+    imageEquals = require('@mapbox/assert-http').imageEquals,
     makizushi = require('../');
 
 var REGEN = false;
