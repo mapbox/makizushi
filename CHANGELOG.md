@@ -1,3 +1,8 @@
+# 1.6.0
+
+* Updated version of blend to 1.5.0
+* Updated version of node-mapnik to 3.7.0
+
 # 1.5.0
 
 * Updated version of blend to 1.3.0
