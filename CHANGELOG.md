@@ -1,7 +1,8 @@
-# 1.6.0
+# 2.0.0
 
 * Updated version of blend to 1.5.0
 * Updated version of node-mapnik to 3.7.0
+* Drops windows support
 
 # 1.5.0
 
