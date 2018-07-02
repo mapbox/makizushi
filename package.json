@@ -11,10 +11,10 @@
     "@mapbox/blend": "~2.0.0",
     "maki": "0.5.0",
     "xtend": "~3.0.0",
-    "mapnik": "~3.7.0"
+    "mapnik": "3.x || 4.x"
   },
   "devDependencies": {
-    "@mapbox/assert-http": "~1.1.4",
+    "@mapbox/assert-http": "https://github.com/mapbox/assert-http/tarball/mapnik-4",
     "tap": "~0.4.8"
   },
   "scripts": {
