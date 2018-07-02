@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "err-code": "0.1.2",
-    "@mapbox/blend": "~2.0.0",
+    "@mapbox/blend": "https://github.com/mapbox/node-blend/tarball/mapnik-4",
     "maki": "0.5.0",
     "xtend": "~3.0.0",
     "mapnik": "3.x || 4.x"
