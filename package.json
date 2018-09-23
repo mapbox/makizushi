@@ -14,7 +14,7 @@
     "xtend": "~3.0.0"
   },
   "devDependencies": {
-    "@mapbox/assert-http": "~1.1.4",
+    "@mapbox/assert-http": "^2.0.0",
     "tap": "~0.4.8"
   },
   "scripts": {
