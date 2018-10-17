@@ -1,20 +1,20 @@
 {
   "name": "@mapbox/makizushi",
-  "version": "2.0.0",
+  "version": "2.0.1-1",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "@mapbox/blend": "^2.0.1-0",
     "err-code": "0.1.2",
-    "@mapbox/blend": "~2.0.0",
     "maki": "0.5.0",
-    "xtend": "~3.0.0",
-    "mapnik": "~3.7.0"
+    "mapnik": "^4.0.1",
+    "xtend": "~3.0.0"
   },
   "devDependencies": {
-    "@mapbox/assert-http": "~1.1.4",
+    "@mapbox/assert-http": "^2.0.0",
     "tap": "~0.4.8"
   },
   "scripts": {

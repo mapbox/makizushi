@@ -1,3 +1,8 @@
+# 3.0.0
+
+* Updated version of node-mapnik to 4.0.1
+* Ends node v0.10.x support
+
 # 2.0.0
 
 * Updated version of blend to 2.0.0
