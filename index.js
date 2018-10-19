@@ -1,7 +1,6 @@
 var fs = require('fs'),
     path = require('path'),
     blend = require('@mapbox/blend'),
-    xtend = require('xtend'),
     errcode = require('err-code');
     maki = require('maki');
 
@@ -38,7 +37,7 @@ module.exports = getMarker;
  */
 function getMarker(options, callback) {
     // prevent .parsedTint from being attached to options
-    options = xtend({}, options);
+    options = Object.assign({}, options);
     if (options.tint) {
         // Expand hex shorthand (3 chars) to 6, e.g. 333 => 333333.
         // This is not done upstream in `node-tint` as some such
@@ -92,7 +91,7 @@ function loadMaki(options, callback) {
 
         // If symbol is present, find correct offset (varies by marker size).
         if (symbol) {
-            parts.push(xtend({
+            parts.push(Object.assign({
                 buffer: data,
                 tint: blend.parseTintString('0x0;0x0;1.4x0'),
             }, offsets[size + (options.retina ? '@2x' : '')]));
@@ -156,7 +155,7 @@ function loadCached(options, callback) {
 
     // If symbol is present, find correct offset (varies by marker size).
     if (symbol) {
-        parts.push(xtend({
+        parts.push(Object.assign({
             buffer: markerCache.symbol[symbol],
             tint: blend.parseTintString('0x0;0x0;1.4x0'),
         }, offsets[size + (options.retina ? '@2x' : '')]));
