@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/makizushi",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
@@ -10,7 +10,6 @@
     "@mapbox/blend": "^2.0.1",
     "err-code": "0.1.2",
     "maki": "0.5.0",
-    "mapnik": "^4.0.1",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
