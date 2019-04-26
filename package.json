@@ -1,5 +1,5 @@
 {
-  "name": "@mapbox/makizushi",
+  "name": "@kartotherian/makizushi",
   "version": "3.0.1",
   "description": "professional maki chef",
   "main": "index.js",
@@ -7,17 +7,20 @@
     "test": "test"
   },
   "dependencies": {
-    "@mapbox/blend": "^2.0.1",
+    "@kartotherian/blend": "^2.0.1",
     "err-code": "0.1.2",
     "maki": "0.5.0",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
-    "@mapbox/assert-http": "^2.0.0",
+    "@kartotherian/assert-http": "^2.0.0",
     "tap": "~0.4.8"
   },
   "scripts": {
     "test": "./test/sizes.sh && tap test/*.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

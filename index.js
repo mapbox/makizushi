@@ -1,6 +1,6 @@
 var fs = require('fs'),
     path = require('path'),
-    blend = require('@mapbox/blend'),
+    blend = require('@kartotherian/blend'),
     xtend = require('xtend'),
     errcode = require('err-code');
     maki = require('maki');
