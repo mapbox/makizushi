@@ -9,11 +9,11 @@
   "dependencies": {
     "@kartotherian/blend": "^2.0.1",
     "err-code": "0.1.2",
-    "@mapbox/maki": "7.1.0",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
     "@kartotherian/assert-http": "^2.0.0",
+    "@mapbox/maki": "^7.1.0",
     "tap": "~0.4.8"
   },
   "scripts": {
