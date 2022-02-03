@@ -3,7 +3,6 @@ var fs = require('fs'),
     blend = require('@kartotherian/blend'),
     xtend = require('xtend'),
     errcode = require('err-code');
-    maki = require('maki');
 
 var markerCache = require('./cache');
 
@@ -16,7 +15,7 @@ var offsets = {
         'l@2x': {x:10,y:14}
     },
     sizes = { s: 12, m: 18, l: 24 },
-    makiRenders = maki.dirname + '/renders/';
+    makiRenders = __dirname + '/renders/';
 
 var makiAvailable = fs.readdirSync(makiRenders)
     .reduce(function(mem, file) {
@@ -181,4 +180,3 @@ function loadCached(options, callback) {
         return callback(null,  data);
     });
 }
-
