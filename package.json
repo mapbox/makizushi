@@ -1,6 +1,6 @@
 {
   "name": "@kartotherian/makizushi",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "@kartotherian/blend": "^2.0.1",
     "err-code": "0.1.2",
-    "maki": "0.5.0",
+    "@mapbox/maki": "7.1.0",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
