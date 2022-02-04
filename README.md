@@ -10,6 +10,14 @@ of the image, using [node-blend](https://github.com/mapbox/node-blend).
 
     npm install --save @kartotherian/makizushi
 
+## updating icons
+
+To use a newer version of Maki and extract the icons, you must have Inkscape installed locally.  Then, update the package and extract:
+
+    npm install --also=dev
+    npm update
+    ./render.sh
+
 ## api
 
 ### `makizushi(options, callback)`
