@@ -5,14 +5,14 @@ var fs = require('fs'),
 var markerCache = require('./cache');
 
 var offsets = {
-        's': {x:4,y:4},
-        'm': {x:6,y:5},
-        'l': {x:5,y:7},
-        's@2x': {x:8,y:8},
-        'm@2x': {x:12,y:10},
-        'l@2x': {x:10,y:14}
-    },
-    sizes = { s: 12, m: 18, l: 24 },
+        's': {x:5,y:4},
+        'm': {x:8,y:6},
+        'l': {x:8,y:9},
+        's@2x': {x:10,y:9},
+        'm@2x': {x:16,y:12},
+        'l@2x': {x:15,y:17}
+    };
+var sizes = { s: 11, m: 15, l: 20 },
     makiRenders = __dirname + '/renders/';
 
 var aliases = {
