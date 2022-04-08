@@ -1,18 +1,18 @@
 {
   "name": "@kartotherian/makizushi",
-  "version": "3.0.2",
+  "version": "3.0.2.wikimedia.1",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "@kartotherian/blend": "^2.0.1",
+    "@mapbox/blend": "^2.0.1",
     "err-code": "0.1.2",
     "xtend": "~3.0.0"
   },
   "devDependencies": {
-    "@kartotherian/assert-http": "^2.0.0",
+    "@mapbox/assert-http": "^3.0.0",
     "@mapbox/maki": "^7.1.0",
     "tap": "~0.4.8"
   },
