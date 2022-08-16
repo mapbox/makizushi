@@ -12,6 +12,8 @@ function build_pngs {
     for svg in $@; do
 
         icon=$(basename $svg .svg)
+        echo
+        echo "Rendering ${icon}..."
 
         for size in 12 18 24; do
             inkscape \
