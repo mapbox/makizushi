@@ -16,9 +16,9 @@ module.exports = [
         .reduce(function(memo, file) {
             if (path.extname(file) !== '.png') return memo;
             var key = path.basename(file, '.png')
-                .replace('-12', '-s')
-                .replace('-18', '-m')
-                .replace('-24', '-l');
+                .replace('-11', '-s')
+                .replace('-15', '-m')
+                .replace('-20', '-l');
             memo[key] = fs.readFileSync(basepath + '/' + file);
             return memo;
         }, memo[dest] || {});
