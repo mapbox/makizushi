@@ -12,8 +12,11 @@
   },
   "devDependencies": {
     "@kartotherian/assert-http": "^2.0.0",
-    "@mapbox/maki": "^7.1.0",
-    "tap": "~0.4.8"
+    "@mapbox/maki": "7.1.0",
+    "@svgdotjs/svg.js": "^3.1.2",
+    "svgdom": "^0.1.10",
+    "tap": "~0.4.8",
+    "xml-formatter": "^2.6.1"
   },
   "scripts": {
     "test": "./test/sizes.sh && tap test/*.js"
