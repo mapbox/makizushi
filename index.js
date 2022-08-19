@@ -42,14 +42,26 @@ var makiAvailable = fs.readdirSync(makiRenders)
 
 module.exports = getMarker;
 
-function contrastingFill([r, g, b]) {
-    const R = parseInt(r, 16) / 255.0;
-    const G = parseInt(g, 16) / 255.0;
-    const B = parseInt(b, 16) / 255.0;
+function convertFromHexSrgb(value) {
+    // Parse hex to a float in [0..1]
+    const f = parseInt(value, 16) / 255.0;
+    // Transform 0-1 sRGB float to the vector expected by the relative luminance formula.
+    return (f <= 0.03928) ?
+        f / 12.92 :
+        Math.pow((f + 0.055) / 1.055, 2.4);
+}
+
+function contrastingFill(rgb) {
+    const [R, G, B] = rgb.map(convertFromHexSrgb);
 
     // Factors from https://www.w3.org/TR/WCAG20/#relativeluminancedef
     const relativeLuminance = 0.2126 * R + 0.7152 * G + 0.0722 * B;
-    const contrastingLightness = (relativeLuminance > 0.5) ? '0' : '1.4';
+    // Threshold given by solving for L giving the same constrast ratio vs. both
+    // white and black, using the formula from https://www.w3.org/TR/WCAG20/#contrast-ratiodef
+    //   (L1 + 0.05) / (L2 + 0.05)
+    //   (1 + 0.05) / (L + 0.05) = (L + 0.05) / (0 + 0.05)
+    //   L = 0.179
+    const contrastingLightness = (relativeLuminance > 0.179) ? '0' : '1.4';
 
     return blend.parseTintString(`0x0;0x0;${contrastingLightness}x0`);
 }
