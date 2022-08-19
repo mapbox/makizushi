@@ -1,3 +1,9 @@
+# 4.0.0
+
+* Fully fork into the `wikimedia` project.
+* Upgrade Maki dependency from 0.5 to 7.0, regenerate all icons.
+* Alphanumeric icon generation is done more programmatically.
+
 # 3.0.1
 
 * No longer depending directly on node-mapnik (only node-blend)
