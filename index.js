@@ -42,6 +42,18 @@ var makiAvailable = fs.readdirSync(makiRenders)
 
 module.exports = getMarker;
 
+function contrastingFill([r, g, b]) {
+    const R = parseInt(r, 16) / 255.0;
+    const G = parseInt(g, 16) / 255.0;
+    const B = parseInt(b, 16) / 255.0;
+
+    // Factors from https://www.w3.org/TR/WCAG20/#relativeluminancedef
+    const relativeLuminance = 0.2126 * R + 0.7152 * G + 0.0722 * B;
+    const contrastingLightness = (relativeLuminance > 0.5) ? '0' : '1.4';
+
+    return blend.parseTintString(`0x0;0x0;${contrastingLightness}x0`);
+}
+
 /**
  * Given a marker object like
  *
@@ -67,6 +79,7 @@ function getMarker(options, callback) {
                 options.tint[2] + options.tint[2];
         }
         options.parsedTint = blend.parseTintString(options.tint);
+        options.symbolTint = contrastingFill(options.tint.match(/../g))
     }
 
     if (options.symbol in aliases) {
@@ -114,7 +127,7 @@ function loadMaki(options, callback) {
         if (symbol) {
             parts.push({
                 buffer: data,
-                tint: blend.parseTintString('0x0;0x0;1.4x0'),
+                tint: options.symbolTint,
                 ...offsets[size + (options.retina ? '@2x' : '')]
             });
         }
@@ -179,7 +192,7 @@ function loadCached(options, callback) {
     if (symbol) {
         parts.push({
             buffer: markerCache.symbol[symbol],
-            tint: blend.parseTintString('0x0;0x0;1.4x0'),
+            tint: options.symbolTint,
             ...offsets[size + (options.retina ? '@2x' : '')]
         });
     }
