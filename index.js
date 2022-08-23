@@ -1,5 +1,4 @@
 var fs = require('fs'),
-    path = require('path'),
     blend = require('@kartotherian/blend'),
     errcode = require('err-code');
 
