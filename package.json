@@ -1,43 +1,47 @@
 {
-  "name": "@wikimedia/makizushi",
-  "version": "4.0.0",
-  "description": "Glue to render Maki icons embedded in a map marker pin",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "dependencies": {
-    "@kartotherian/blend": "^2.0.1",
-    "err-code": "0.1.2"
-  },
-  "devDependencies": {
-    "@kartotherian/assert-http": "^2.0.0",
-    "@mapbox/maki": "7.1.0",
-    "@svgdotjs/svg.js": "^3.1.2",
-    "svgdom": "^0.1.10",
-    "tap": "~0.4.8",
-    "xml-formatter": "^2.6.1"
-  },
-  "scripts": {
-    "test": "./test/sizes.sh && tap test/*.js"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:wikimedia/makizushi.git"
-  },
-  "keywords": [
-    "maki",
-    "icon",
-    "custom"
-  ],
-  "author": "Tom MacWright",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://phabricator.wikimedia.org/tag/kartotherian/"
-  },
-  "homepage": "https://github.com/wikimedia/makizushi"
+	"name": "@wikimedia/makizushi",
+	"version": "4.0.0",
+	"description": "Glue to render Maki icons embedded in a map marker pin",
+	"main": "lib/index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"dependencies": {
+		"@kartotherian/blend": "^2.0.1",
+		"err-code": "0.1.2"
+	},
+	"devDependencies": {
+		"@kartotherian/assert-http": "^2.0.0",
+		"@mapbox/maki": "7.1.0",
+		"@svgdotjs/svg.js": "^3.1.2",
+		"eslint": "^7.32.0",
+		"eslint-config-wikimedia": "^0.20.0",
+		"svgdom": "^0.1.10",
+		"tap": "~0.4.8",
+		"xml-formatter": "^2.6.1"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"test": "./test/sizes.sh && tap test/*.js"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:wikimedia/makizushi.git"
+	},
+	"keywords": [
+		"maki",
+		"icon",
+		"custom"
+	],
+	"author": "Tom MacWright",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://phabricator.wikimedia.org/tag/kartotherian/"
+	},
+	"homepage": "https://github.com/wikimedia/makizushi"
 }
