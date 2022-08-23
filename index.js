@@ -15,6 +15,25 @@ var offsets = {
     sizes = { s: 12, m: 18, l: 24 },
     makiRenders = __dirname + '/renders/';
 
+var aliases = {
+    'america-football': 'american-football',
+    'chemist': 'pharmacy',
+    'camera': 'attraction',
+    'disability': 'wheelchair',
+    'emergency-telephone': 'emergency-phone',
+    'industrial': 'industry',
+    'land-use': 'landuse',
+    'london-underground': 'rail-metro',
+    'minefield': 'danger',
+    'mobilephone': 'mobile-phone',
+    'oil-well': 'industry',
+    'park2': 'park',
+    'polling-place': 'post',
+    'rail-above': 'rail',
+    'rail-underground': 'rail-metro',
+    'toilets': 'toilet'
+};
+
 var makiAvailable = fs.readdirSync(makiRenders)
     .reduce(function(mem, file) {
         mem[file.replace('.png', '')] = true;
@@ -48,6 +67,10 @@ function getMarker(options, callback) {
                 options.tint[2] + options.tint[2];
         }
         options.parsedTint = blend.parseTintString(options.tint);
+    }
+
+    if (options.symbol in aliases) {
+        options.symbol = aliases[options.symbol];
     }
 
     if (!options.symbol ||
