@@ -15,15 +15,17 @@ function build_pngs {
         echo
         echo "Rendering ${icon}..."
 
-        for size in 12 18 24; do
+        for size in 11 15 20; do
             inkscape \
-                -w ${size} -h ${size} \
+                -w ${size} \
+                --export-area-page \
                 -o ${pngdir}/${icon}-${size}.png \
                 $svg > /dev/null
 
             retina=$((size * 2))
             inkscape \
-                -w ${retina} -h ${retina} \
+                -w ${retina} \
+                --export-area-page \
                 -o ${pngdir}/${icon}-${size}@2x.png \
                 $svg > /dev/null
         done
