@@ -1,6 +1,6 @@
 {
 	"name": "@wikimedia/makizushi",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Glue to render Maki icons embedded in a map marker pin",
 	"main": "lib/index.js",
 	"directories": {
