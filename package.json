@@ -1,6 +1,6 @@
 {
 	"name": "@wikimedia/makizushi",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Glue to render Maki icons embedded in a map marker pin",
 	"main": "lib/index.js",
 	"directories": {
@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@kartotherian/assert-http": "^2.0.0",
-		"@mapbox/maki": "7.1.0",
+		"@mapbox/maki": "7.2.0",
 		"@svgdotjs/svg.js": "^3.1.2",
 		"eslint": "^7.32.0",
 		"eslint-config-wikimedia": "^0.20.0",

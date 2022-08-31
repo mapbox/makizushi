@@ -1,7 +1,11 @@
+# 4.0.1
+* Fix mismatching Maki dependency from 7.1.0 to 7.2.0.
+
 # 4.0.0
 
 * Fully fork into the `wikimedia` project.
-* Upgrade Maki dependency from 0.5 to 7.0, regenerate all icons.
+* Upgrade Maki dependency from 0.5.0 to 7.1.0.
+* Regenerate all icons using Maki 7.2.0 as source.
 * Alphanumeric icon generation is done more programmatically.
 
 # 3.0.1
