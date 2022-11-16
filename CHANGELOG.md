@@ -1,3 +1,7 @@
+# 4.1.0
+* Bump dependencies on node-mapnik and blend
+* Ends node v0.10.x support
+
 # 4.0.1
 * Fix mismatching Maki dependency from 7.1.0 to 7.2.0.
 
