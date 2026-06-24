@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/makizushi",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "professional maki chef",
   "main": "index.js",
   "directories": {
@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/mapbox/makizushi/issues"
   },
-  "homepage": "https://github.com/mapbox/makizushi"
+  "homepage": "https://github.com/mapbox/makizushi",
+  "publishConfig": {
+    "access": "public"
+  }
 }
